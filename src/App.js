@@ -1,5 +1,7 @@
 import Home from './components/pages/Home';
 import About from './components/pages/About';
+import Post from './components/pages/Post';
+import PostAdd from './components/pages/PostAdd';
 import NotFound from './components/pages/NotFound';
 import { Routes, Route} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -14,6 +16,8 @@ const  App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/post/:postId' element={<Post />} />
+          <Route path='/post/add' element={<PostAdd />} />
           <Route
               path="*"
               element={<NotFound />}
