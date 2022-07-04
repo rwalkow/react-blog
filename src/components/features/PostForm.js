@@ -37,7 +37,7 @@ const PostForm = ({ action, actionText, ...props }) => {
     setDateError(!publishedDate);
     setCategoryError(!category);
     if (content && publishedDate && content !== '<p><br></p>') {
-      action({ title, author, publishedDate, shortDescription, content, id });
+      action({ title, author, publishedDate, shortDescription, content, id , category});
       navigate('/');
     }
   }
