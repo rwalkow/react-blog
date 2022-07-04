@@ -2,6 +2,7 @@ import shortid from 'shortid';
 
 export const getAllPosts = ({ posts }) => posts;
 export const getPostById = ({ posts }, postId) => posts.find(post => post.id === postId);
+export const getPostByCategory = ({ posts }, postCategory) => posts.filter(post => post.category === postCategory);
 
 const createActionName = actionName => `app/posts/${actionName}`;
 const ADD_POST = createActionName('ADD_POST');
